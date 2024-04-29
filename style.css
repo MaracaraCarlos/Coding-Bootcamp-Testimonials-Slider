@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+:root {
+  --Dark-Blue: #202046;
+  --Grayish-Blue: #babacf;
+}
+*, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  font-size: 32px;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+#container_main1 {
+  min-width: 375px;
+  width: 100%;
+  height: 100%;
+  display: flex;           /* none/flex */
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+#bg_img {
+  margin-top: 30px;
+  height: 50%;
+  width: 90%;
+  background-image: url(images/pattern-bg.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#container_img {
+  width: 70%;
+}
+#container_img img {
+  width: 100%;
+  border-radius: 6px;
+  transform: translateY(3%);
+  box-shadow: 0 20px 20px -15px var(--Dark-Blue);
+}
+#arrow_container {
+  display: flex;
+  padding: 8px 10px;
+  gap: 10px;
+  border-radius: 100vmax;
+  position: absolute;
+  background-color: #fff;
+  bottom: 2%;
+  left: 39%;
+}
+ion-icon {
+  color: var(--Grayish-Blue);
+  font-size: 22px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+}
+ion-icon:hover {
+  color: var(--Dark-Blue);
+  scale: 1.1;
+}
+#quote_container {
+  height: 50%;
+  padding-inline: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url(images/pattern-quotes.svg), url(images/pattern-curve.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 10%, bottom left;
+  background-size: 60px 50px, 305px 77px;
+}
+#quote_container p {
+  font-size: .63rem;
+  color: var(--Dark-Blue);
+  font-weight: 300;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+#quote_container #name {
+  padding-top: 10px;
+  font-weight: 700;
+  font-size: .52rem;
+}
+#quote_container #profession {
+  padding-top: 5px;
+  font-weight: 500;
+  font-size: .52rem;
+  color: var(--Grayish-Blue);
+}
+#container_main2 {
+  min-width: 375px;
+  width: 100%;
+  height: 100%;
+  display: none;    /* none/flex */
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+@media screen and (min-width: 720px) {
+  #container_main1 {
+    flex-direction: row-reverse;
+  }
+  #bg_img {
+    height: 85%;
+    width: 50%;
+    margin-top: 0;
+  }
+  #quote_container {
+    width: 50%;
+    height: 100%;
+    padding-left: 10vw;
+    text-align: left;
+    background-position: 40% 35%, bottom left;
+    background-size: 120px 100px, 610px 154px;
+    position: relative;
+  }
+  #quote_container > .quote {
+    font-size: 1rem;
+    width: 110%;
+    position: absolute;
+  }
+  #quote_container #name {
+    font-size: .7rem;
+    padding: 0;
+  }
+  #quote_container #profession {
+    font-size: .7rem;
+    padding-left: 20px;
+    padding: 0 0 0 15px;
+  }
+  .footer {
+    padding-top: 300px;
+    display: flex;
+    flex-direction: row;
+  }
+  #arrow_container {
+    gap: 20px;
+    padding: 10px;
+    left: 25%;
+    bottom: 4%;
+  }
+  #container_main2 {
+    flex-direction: row-reverse;
+  }
+}
